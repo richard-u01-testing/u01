@@ -1,0 +1,28 @@
+{
+  "name": "Ubuntu",
+  
+  // A general-purpose Ubuntu image with common tools.
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  // Adding Docker-in-Docker and the GitHub CLI.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // You can leave this out if you don't need it.
+  "forwardPorts": [],
+
+  // A simple command to show that setup is complete.
+  "postCreateCommand": "echo 'Codespace is ready!'",
+
+  // Useful extensions for Docker and general development.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "github.vscode-pull-request-github"
+      ]
+    }
+  }
+}
